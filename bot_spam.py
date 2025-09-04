@@ -5,7 +5,7 @@ import os
 # Thay bằng token bot của bạn
 TOKEN = "8404713686:AAF2SmOuGZwu-jcdwNr3ewCTAr-WgCrAbV0"
 # Thay bằng URL server Flask
-SERVER_URL = "http://127.0.0.1:8080"
+SERVER_URL = " https://deploy-sever-bot.onrender.com"
 
 def start_command(update, context):
     update.message.reply_text("Bot sẵn sàng. Gửi lệnh theo dạng:\n<name> <message> <threads>")
