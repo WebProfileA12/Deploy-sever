@@ -33,6 +33,9 @@ def stop():
 @app.route("/status", methods=["GET"])
 def status():
     return jsonify(task)
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "Server is running"})
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
